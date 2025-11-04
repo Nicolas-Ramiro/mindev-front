@@ -1,65 +1,42 @@
+// app/page.tsx
 import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-b from-zinc-950 via-zinc-800 to-zinc-900 text-white min-h-[80vh] px-6 sm:px-10 lg:px-20 py-16">
+      {/* Texto lado esquerdo */}
+      <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl font-bold text-orange-500 mb-6">
+          Mindev
+        </h1>
+        <h2 className="text-xl md:text-2xl mb-4">
+          Inovação e Empatia para Transformar a Saúde Digital
+        </h2>
+        <p className="text-justify md:text-lg leading-relaxed text-gray-200">
+          A MindDev é uma empresa de tecnologia especializada em saúde digital
+          que acredita no poder da inovação para criar soluções acessíveis e
+          eficientes. Nossa missão é simplificar a jornada do paciente e
+          promover a inclusão, utilizando a tecnologia para tornar a saúde
+          digital acessível a todos.
+          <br />
+          <br />
+          Atuamos em todas as etapas, desde a pesquisa e mapeamento de processos
+          até o desenvolvimento de ferramentas como chatbots de voz. Unimos
+          tecnologia e empatia para transformar a vida das pessoas, garantindo
+          que o cuidado e a assistência cheguem a quem mais precisa.
+        </p>
+      </div>
+
+      {/* Imagem lado direito */}
+      <div className="md:w-1/2 flex justify-center">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+          src="/paisagem.jpg"
+          alt="Prédio empresarial"
+          width={500}
+          height={400}
+          className="rounded-lg shadow-lg w-full md:w-[90%] max-w-[500px]"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
