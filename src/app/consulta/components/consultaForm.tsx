@@ -227,7 +227,7 @@ const cadastrarAtendimento = async () => {
 
       {/* Área principal */}
       <div className="flex-1 flex flex-col items-center justify-center p-10 overflow-auto">
-        <img src="/LogoMindev.png" alt="Logo" className="w-32 h-32 mb-4 mt-20" />
+        <img src="/LogoMindev.png" alt="Logo" className="w-32 h-32 mb-4 mt-50" />
         <h1 className="text-3xl font-bold mb-10 text-orange-500">Agendamento de Consultas</h1>
 
         {/* Formulário de Paciente */}
