@@ -37,8 +37,8 @@ export default function FormAcompanhante({ acompanhante, onCancel, onSuccess }: 
 
     const method = acompanhante ? "PUT" : "POST";
     const url = acompanhante
-      ? `http://localhost:8080/mindev/acompanhante/${acompanhante.idAcompanhante}`
-      : "http://localhost:8080/mindev/acompanhante";
+      ? `https://mindev-java-api.onrender.com/mindev/acompanhante/${acompanhante.idAcompanhante}`
+      : "https://mindev-java-api.onrender.com/mindev/acompanhante";
 
     await fetch(url, {
       method,

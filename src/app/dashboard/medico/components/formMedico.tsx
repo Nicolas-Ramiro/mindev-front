@@ -37,8 +37,8 @@ export default function FormMedico({ medico, onCancel, onSuccess }: FormMedicoPr
 
     const method = medico ? "PUT" : "POST";
     const url = medico
-      ? `http://localhost:8080/mindev/medico/${medico.idMedico}`
-      : "http://localhost:8080/mindev/medico";
+      ? `https://mindev-java-api.onrender.com/mindev/medico/${medico.idMedico}`
+      : "https://mindev-java-api.onrender.com/mindev/medico";
 
     await fetch(url, {
       method,

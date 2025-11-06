@@ -36,7 +36,7 @@ export default function ConsultaForm() {
 
   // ✅ Cadastrar paciente
   const cadastrarPaciente = async (dados: Paciente) => {
-    const response = await fetch("http://localhost:8080/mindev/paciente", {
+    const response = await fetch("https://mindev-java-api.onrender.com/mindev/paciente", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dados),
@@ -52,7 +52,7 @@ export default function ConsultaForm() {
 
   // ✅ Cadastrar médico
   const cadastrarMedico = async (dados: Medico) => {
-    const response = await fetch("http://localhost:8080/mindev/medico", {
+    const response = await fetch("https://mindev-java-api.onrender.com/mindev/medico", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dados),
@@ -91,7 +91,7 @@ const cadastrarAtendimento = async () => {
   };
 
   try {
-    const response = await fetch("http://localhost:8080/mindev/atendimento", {
+    const response = await fetch("https://mindev-java-api.onrender.com/mindev/atendimento", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(atendimento),
@@ -123,8 +123,8 @@ const cadastrarAtendimento = async () => {
   try {
     const url =
       tipoConsulta === "presencial"
-        ? "http://localhost:8080/mindev/presencial"
-        : "http://localhost:8080/mindev/teleatendimento";
+        ? "https://mindev-java-api.onrender.com/mindev/presencial"
+        : "https://mindev-java-api.onrender.com/mindev/teleatendimento";
 
     const payload =
       tipoConsulta === "presencial"

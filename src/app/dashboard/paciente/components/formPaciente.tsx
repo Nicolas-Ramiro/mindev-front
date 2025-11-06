@@ -41,8 +41,8 @@ export default function FormPaciente({ paciente, onCancel, onSuccess }: FormPaci
 
     const method = paciente ? "PUT" : "POST";
     const url = paciente
-      ? `http://localhost:8080/mindev/paciente/${paciente.idPaciente}`
-      : "http://localhost:8080/mindev/paciente";
+      ? `https://mindev-java-api.onrender.com/mindev/paciente/${paciente.idPaciente}`
+      : "https://mindev-java-api.onrender.com/mindev/paciente";
 
     await fetch(url, {
       method,

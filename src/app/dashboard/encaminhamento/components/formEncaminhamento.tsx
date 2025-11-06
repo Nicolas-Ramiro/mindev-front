@@ -37,8 +37,8 @@ export default function FormEncaminhamento({ encaminhamento, onCancel, onSuccess
 
     const method = encaminhamento ? "PUT" : "POST";
     const url = encaminhamento
-      ? `http://localhost:8080/mindev/encaminhamento/${encaminhamento.idEncaminhamento}`
-      : "http://localhost:8080/mindev/encaminhamento";
+      ? `https://mindev-java-api.onrender.com/mindev/encaminhamento/${encaminhamento.idEncaminhamento}`
+      : "https://mindev-java-api.onrender.com/mindev/encaminhamento";
 
     await fetch(url, {
       method,

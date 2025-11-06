@@ -22,7 +22,7 @@ export default function ListaPaciente({ onNovo, onEditar }: ListaPacienteProps) 
 
   async function fetchPacientes() {
     try {
-      const res = await fetch("http://localhost:8080/mindev/paciente");
+      const res = await fetch("https://mindev-java-api.onrender.com/mindev/paciente");
       const data = await res.json();
       setPacientes(data || []);
     } catch (err) {
@@ -38,7 +38,7 @@ export default function ListaPaciente({ onNovo, onEditar }: ListaPacienteProps) 
 
   async function handleDelete(id: number) {
     if (!confirm("Deseja realmente excluir este paciente?")) return;
-    await fetch(`http://localhost:8080/mindev/paciente/${id}`, { method: "DELETE" });
+    await fetch(`https://mindev-java-api.onrender.com/mindev/paciente/${id}`, { method: "DELETE" });
     fetchPacientes();
   }
 

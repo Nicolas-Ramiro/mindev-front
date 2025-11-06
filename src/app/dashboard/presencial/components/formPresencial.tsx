@@ -53,8 +53,8 @@ export default function FormPresencial({
     e.preventDefault();
     const method = presencial ? "PUT" : "POST";
     const url = presencial
-      ? `http://localhost:8080/mindev/presencial/${presencial.idAtendimentoPre}`
-      : "http://localhost:8080/mindev/presencial";
+      ? `https://mindev-java-api.onrender.com/mindev/presencial/${presencial.idAtendimentoPre}`
+      : "https://mindev-java-api.onrender.com/mindev/presencial";
 
     await fetch(url, {
       method,

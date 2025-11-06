@@ -12,7 +12,7 @@ export default function ListaAtendimento({ onNovo, onEditar }: ListaAtendimentoP
   const [atendimentos, setAtendimentos] = useState<Atendimento[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/mindev/atendimento")
+    fetch("https://mindev-java-api.onrender.com/mindev/atendimento")
       .then((res) => res.json())
       .then(setAtendimentos)
       .catch((err) => console.error("Erro ao buscar atendimentos:", err));
@@ -21,7 +21,7 @@ export default function ListaAtendimento({ onNovo, onEditar }: ListaAtendimentoP
   async function handleDelete(id: number) {
     if (!confirm("Deseja realmente excluir este atendimento?")) return;
 
-    const res = await fetch(`http://localhost:8080/mindev/atendimento/${id}`, {
+    const res = await fetch(`https://mindev-java-api.onrender.com/mindev/atendimento/${id}`, {
       method: "DELETE",
     });
 

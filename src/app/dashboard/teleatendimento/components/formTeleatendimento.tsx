@@ -55,8 +55,8 @@ export default function FormTeleatendimento({
     e.preventDefault();
     const method = teleatendimento ? "PUT" : "POST";
     const url = teleatendimento
-      ? `http://localhost:8080/mindev/teleatendimento/${teleatendimento.idTeleatendimento}`
-      : "http://localhost:8080/mindev/teleatendimento";
+      ? `https://mindev-java-api.onrender.com/mindev/teleatendimento/${teleatendimento.idTeleatendimento}`
+      : "https://mindev-java-api.onrender.com/mindev/teleatendimento";
 
     const payload = { ...form };
 

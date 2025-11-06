@@ -37,8 +37,8 @@ export default function FormTerapia({ terapia, onCancel, onSuccess }: FormTerapi
 
     const method = terapia ? "PUT" : "POST";
     const url = terapia
-      ? `http://localhost:8080/mindev/terapia/${terapia.idTerapia}`
-      : "http://localhost:8080/mindev/terapia";
+      ? `https://mindev-java-api.onrender.com/mindev/terapia/${terapia.idTerapia}`
+      : "https://mindev-java-api.onrender.com/mindev/terapia";
 
     await fetch(url, {
       method,

@@ -27,14 +27,14 @@ export default function ListaTeleatendimento({
   const [lista, setLista] = useState<Teleatendimento[]>([]);
 
   async function carregar() {
-    const res = await fetch("http://localhost:8080/mindev/teleatendimento");
+    const res = await fetch("https://mindev-java-api.onrender.com/mindev/teleatendimento");
     const dados = await res.json();
     setLista(dados);
   }
 
   async function excluir(id: number) {
     if (confirm("Deseja realmente excluir este teleatendimento?")) {
-      await fetch(`http://localhost:8080/mindev/teleatendimento/${id}`, {
+      await fetch(`https://mindev-java-api.onrender.com/mindev/teleatendimento/${id}`, {
         method: "DELETE",
       });
       carregar();

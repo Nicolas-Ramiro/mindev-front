@@ -27,14 +27,14 @@ export default function ListaPresencial({
   const [lista, setLista] = useState<AtendimentoPresencial[]>([]);
 
   async function carregar() {
-    const res = await fetch("http://localhost:8080/mindev/presencial");
+    const res = await fetch("https://mindev-java-api.onrender.com/mindev/presencial");
     const dados = await res.json();
     setLista(dados);
   }
 
   async function excluir(id: number) {
     if (confirm("Deseja realmente excluir este atendimento?")) {
-      await fetch(`http://localhost:8080/mindev/presencial/${id}`, {
+      await fetch(`https://mindev-java-api.onrender.com/mindev/presencial/${id}`, {
         method: "DELETE",
       });
       carregar();

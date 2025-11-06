@@ -20,7 +20,7 @@ export default function ListaTerapia({ onNovo, onEditar }: ListaTerapiaProps) {
 
   async function fetchTerapias() {
     try {
-      const res = await fetch("http://localhost:8080/mindev/terapia");
+      const res = await fetch("https://mindev-java-api.onrender.com/mindev/terapia");
       const data = await res.json();
       setTerapias(data || []);
     } catch (err) {
@@ -36,7 +36,7 @@ export default function ListaTerapia({ onNovo, onEditar }: ListaTerapiaProps) {
 
   async function handleDelete(id: number) {
     if (!confirm("Deseja realmente excluir esta terapia?")) return;
-    await fetch(`http://localhost:8080/mindev/terapia/${id}`, { method: "DELETE" });
+    await fetch(`https://mindev-java-api.onrender.com/mindev/terapia/${id}`, { method: "DELETE" });
     fetchTerapias();
   }
 

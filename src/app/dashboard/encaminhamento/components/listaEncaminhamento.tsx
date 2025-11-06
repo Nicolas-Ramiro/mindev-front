@@ -20,7 +20,7 @@ export default function ListaEncaminhamento({ onNovo, onEditar }: ListaEncaminha
 
   async function fetchEncaminhamento() {
     try {
-      const res = await fetch("http://localhost:8080/mindev/encaminhamento");
+      const res = await fetch("https://mindev-java-api.onrender.com/mindev/encaminhamento");
       const data = await res.json();
       setEncaminhamentos(data || []);
     } catch (err) {
@@ -36,7 +36,7 @@ export default function ListaEncaminhamento({ onNovo, onEditar }: ListaEncaminha
 
   async function handleDelete(id: number) {
     if (!confirm("Deseja realmente excluir este encaminhamento?")) return;
-    await fetch(`http://localhost:8080/mindev/encaminhamento/${id}`, { method: "DELETE" });
+    await fetch(`https://mindev-java-api.onrender.com/mindev/encaminhamento/${id}`, { method: "DELETE" });
     fetchEncaminhamento();
   }
 

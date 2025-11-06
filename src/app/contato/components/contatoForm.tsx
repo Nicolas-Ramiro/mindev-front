@@ -49,7 +49,7 @@ export default function ContatoForm() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/mindev/contato", // URL da sua API Java
+        "https://mindev-java-api.onrender.com/mindev/contato", // URL da sua API Java
         {
           method: "POST",
           headers: {

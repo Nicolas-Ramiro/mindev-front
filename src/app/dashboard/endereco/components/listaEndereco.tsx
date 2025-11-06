@@ -23,7 +23,7 @@ export default function ListaEndereco({ onNovo, onEditar }: ListaEnderecoProps) 
 
   async function fetchEndereco() {
     try {
-      const res = await fetch("http://localhost:8080/mindev/endereco");
+      const res = await fetch("https://mindev-java-api.onrender.com/mindev/endereco");
       const data = await res.json();
       setEnderecos(data || []);
     } catch (err) {
@@ -39,7 +39,7 @@ export default function ListaEndereco({ onNovo, onEditar }: ListaEnderecoProps) 
 
   async function handleDelete(id: number) {
     if (!confirm("Deseja realmente excluir este endereço?")) return;
-    await fetch(`http://localhost:8080/mindev/endereco/${id}`, { method: "DELETE" });
+    await fetch(`https://mindev-java-api.onrender.com/mindev/endereco/${id}`, { method: "DELETE" });
     fetchEndereco();
   }
 

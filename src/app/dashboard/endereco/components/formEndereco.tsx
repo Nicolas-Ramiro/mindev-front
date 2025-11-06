@@ -43,8 +43,8 @@ export default function FormEnderco({ endereco, onCancel, onSuccess }: FormEnder
 
     const method = endereco ? "PUT" : "POST";
     const url = endereco
-      ? `http://localhost:8080/mindev/endereco/${endereco.idEndereco}`
-      : "http://localhost:8080/mindev/endereco";
+      ? `https://mindev-java-api.onrender.com/mindev/endereco/${endereco.idEndereco}`
+      : "https://mindev-java-api.onrender.com/mindev/endereco";
 
     await fetch(url, {
       method,

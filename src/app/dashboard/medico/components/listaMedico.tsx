@@ -20,7 +20,7 @@ export default function ListaMedico({ onNovo, onEditar }: ListaMedicoProps) {
 
   async function fetchMedicos() {
     try {
-      const res = await fetch("http://localhost:8080/mindev/medico");
+      const res = await fetch("https://mindev-java-api.onrender.com/mindev/medico");
       const data = await res.json();
       setMedicos(data || []);
     } catch (err) {
@@ -36,7 +36,7 @@ export default function ListaMedico({ onNovo, onEditar }: ListaMedicoProps) {
 
   async function handleDelete(id: number) {
     if (!confirm("Deseja realmente excluir este medico?")) return;
-    await fetch(`http://localhost:8080/mindev/medico/${id}`, { method: "DELETE" });
+    await fetch(`https://mindev-java-api.onrender.com/mindev/medico/${id}`, { method: "DELETE" });
     fetchMedicos();
   }
 

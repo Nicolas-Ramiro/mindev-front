@@ -32,8 +32,8 @@ export default function FormAtendimento({ atendimento, onCancel, onSuccess }: Fo
 
     const method = atendimento ? "PUT" : "POST";
     const url = atendimento
-      ? `http://localhost:8080/mindev/atendimento/${atendimento.idAtendimento}`
-      : "http://localhost:8080/mindev/atendimento";
+      ? `https://mindev-java-api.onrender.com/mindev/atendimento/${atendimento.idAtendimento}`
+      : "https://mindev-java-api.onrender.com/mindev/atendimento";
 
     const res = await fetch(url, {
       method,

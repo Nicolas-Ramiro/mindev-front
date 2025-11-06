@@ -20,7 +20,7 @@ export default function ListaAcompanhante({ onNovo, onEditar }: ListaAcompanhant
 
   async function fetchAcompanhantes() {
     try {
-      const res = await fetch("http://localhost:8080/mindev/acompanhante");
+      const res = await fetch("https://mindev-java-api.onrender.com/mindev/acompanhante");
       const data = await res.json();
       setAcompanhantes(data || []);
     } catch (err) {
@@ -36,7 +36,7 @@ export default function ListaAcompanhante({ onNovo, onEditar }: ListaAcompanhant
 
   async function handleDelete(id: number) {
     if (!confirm("Deseja realmente excluir este acompanhante?")) return;
-    await fetch(`http://localhost:8080/mindev/acompanhante/${id}`, { method: "DELETE" });
+    await fetch(`https://mindev-java-api.onrender.com/mindev/acompanhante/${id}`, { method: "DELETE" });
     fetchAcompanhantes();
   }
 
