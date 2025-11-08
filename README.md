@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Mindev - Sistema de Gestão de Atendimentos Clínicos
 
-## Getting Started
+Professor eu começei a fazer o projeto durante suas aulas e não percebi que era para fazer em React e Next, perguntei para você se podia enviar em Next e você pediu para deixar comentado aqui no README para te lembrar
 
-First, run the development server:
+🎯 Objetivo do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto Mindev tem como objetivo principal desenvolver um sistema de cadastro e gestão de atendimentos clínicos. A solução proposta oferece suporte completo para a administração de atendimentos presenciais e teleatendimentos, além da gestão de pacientes, acompanhantes, médicos, terapias, encaminhamentos e endereços.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+💻 Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este projeto foi desenvolvido utilizando as seguintes tecnologias e ferramentas:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Framework: Next.js 
+Estilização: Tailwind CSS 
+Hospedagem: Vercel 
+Controle de Versão: GitHub 
+Ambiente de Desenvolvimento: Visual Studio Code 
 
-## Learn More
+🔗 Acesso ao Projeto
 
-To learn more about Next.js, take a look at the following resources:
+Aplicação Funcional (URL): https://mindev-front.vercel.app/
+Repositório GitHub: https://github.com/Nicolas-Ramiro/mindev-front
+Vídeo de Apresentação (YouTube): https://youtu.be/UwTlwjf-dyg?si=cO7P-O2Q5wOq0gHa 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👥 Integrantes do Grupo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Nicolas Monteiro Ramiro              RM: 562380
+Hebert Lopes dos Santos              RM: 563192
+Marcus Vinícius Vila Nova da Silva   RM: 558771
 
-## Deploy on Vercel
+📂 Estrutura de Pastas do Projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A estrutura de pastas segue a convenção do Next.js App Router, organizada para facilitar a manutenção e o desenvolvimento:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+mindev-front-master/
+├── .gitignore
+├── README.md
+├── eslint.config.mjs
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public/
+│   ├── Hebert.png
+│   ├── LogoMindev.png
+│   ├── Marcus.jpg
+│   ├── Nicolas.jpg
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── linkedinLogo.webp
+│   ├── next.svg
+│   ├── paisagem.jpg
+│   ├── vercel.svg
+│   └── window.svg
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── login/
+│   │   │       └── route.ts
+│   │   ├── consulta/
+│   │   │   ├── components/
+│   │   │   │   └── consultaForm.tsx
+│   │   │   └── page.tsx
+│   │   ├── contato/
+│   │   │   ├── components/
+│   │   │   │   └── contatoForm.tsx
+│   │   │   └── page.tsx
+│   │   ├── dashboard/
+│   │   │   ├── acompanhante/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── formAcompanhante.tsx
+│   │   │   │   │   └── listaAcompanhante.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── atendimento/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── formAtendimento.tsx
+│   │   │   │   │   └── listaAtendimento.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── encaminhamento/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── formEncaminhamento.tsx
+│   │   │   │   │   └── listaEncaminhamento.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── endereco/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── formEndereco.tsx
+│   │   │   │   │   └── listaEndereco.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── medico/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── formMedico.tsx
+│   │   │   │   │   └── listaMedico.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── paciente/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── ListaPaciente.tsx
+│   │   │   │   │   └── formPaciente.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── presencial/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── formPresencial.tsx
+│   │   │   │   │   └── listaPresencial.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── teleatendimento/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── formTeleatendimento.tsx
+│   │   │   │   │   └── listaTeleatendimento.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── terapia/
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── formTerapia.tsx
+│   │   │   │   │   └── listaTerapia.tsx
+│   │   │   │   └── page.tsx
+│   │   ├── faq/
+│   │   │   ├── components/
+│   │   │   │   └── faqItem.tsx
+│   │   │   └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── login/
+│   │   │   ├── (components)/
+│   │   │   │   └── login-form/
+│   │   │   │       └── login-form.tsx
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── page.tsx
+│   │   ├── proposta/
+│   │   │   └── page.tsx
+│   │   └── quem-somos/
+│   │       └── page.tsx
+│   └── components/
+│       ├── botaoDashboard.tsx
+│       ├── footer.tsx
+│       └── header.tsx
+└── tsconfig.json
